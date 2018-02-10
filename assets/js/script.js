@@ -42,13 +42,15 @@ $(function() {
                     nextWeek : 'dddd',
                     sameElse : 'MMMM Do YYYY'
                 });
+                //Check if it is a different day
                 if (prevDay == null || prevDay != today) {
                     $callLogTable.append(
                         '<tr>'
                             + '<td class="grey font_size_big" colspan="3">' + today + '</td>'
                         + '</tr>');
                     prevDay = today;
-                }             
+                }            
+                //Draw table by fetch call log line by line 
                 $callLogTable.append(
                     '<tr class="callLogTable_row">'
                         + '<td>'
@@ -74,11 +76,19 @@ $(function() {
             });
         }
     });
-
+    /**
+     * This method is used to format phone number from raw phone data.
+     * @param {phone number} phone 
+     */
     function formatPhone(phone) {
         return phone.substring(2, 5) + '.' + phone.substring(5, 8) + '.' + phone.substring(8, 12);
     }
 
+    /**
+     * This method is used to check if identity needs to be replaced by phone number.
+     * @param {identity} identity 
+     * @param {phone} phone 
+     */
     function getIdentity(identity, phone) {
         if (identity == null) {
             return phone;
@@ -86,6 +96,11 @@ $(function() {
         return identity;
     }
 
+    /**
+     * This method is used to check if phone number needs to be blank out.
+     * @param {identity} identity 
+     * @param {identity} phone 
+     */
     function getPhone(identity, phone) {
         if (identity == null) {
             return "";
@@ -93,6 +108,11 @@ $(function() {
         return phone;
     }
 
+    /**
+     * This method is used to get profile photo.
+     * @param {reputation} reputation 
+     * @param {identity} identity 
+     */
     function getProfilePhoto(reputation, identity) {
         var profilePhoto = EMPTY_STRING;
         if (reputation == null) {
@@ -109,6 +129,11 @@ $(function() {
         return '<img class="profile_photo" src="' + ICON_PATH + profilePhoto + '">'; 
     }
 
+    /**
+     * This method is used to get text on profile photo.
+     * @param {reputation} reputation 
+     * @param {identity} identity 
+     */
     function getProfileText(reputation, identity) {
         var profileText = EMPTY_STRING;
         
@@ -126,6 +151,10 @@ $(function() {
         return '<div class="text_centered">' + profileText + '</div>';
     }
 
+    /**
+     * This method is used to return initial.
+     * @param {identity} identity 
+     */
     function getName(identity) {
         strings = identity.split(" ");
         /*
@@ -140,6 +169,11 @@ $(function() {
         }
     }
 
+    /**
+     * This method is used to get call detail icon.
+     * @param {termination} termination 
+     * @param {callDirection} callDirection 
+     */
     function getDetailPhoto(termination, callDirection) {
         var detailIcon = EMPTY_STRING;
         if (callDirection == "Outgoing") {
@@ -154,6 +188,11 @@ $(function() {
         return '<img class="detail_icon" src="' + ICON_PATH + detailIcon + '">';    
     }
 
+    /**
+     * This method is used to get Hiya info.
+     * @param {reputation} reputation 
+     * @param {identity} identity 
+     */
     function getAdditionalInfo(reputation, identity) {
         var additionalInfo = EMPTY_STRING;
         if (reputation == null) {

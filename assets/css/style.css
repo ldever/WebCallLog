@@ -1,4 +1,77 @@
-@media screen and (max-width: 1000px) {   
+@media screen and (max-width: 340px) {   
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .text_centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .profile_photo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .icon_block {
+        display: inline-block;
+    }
+
+    .time_block {
+        display: inline-block;
+    }
+
+    #callLogTable {
+        width: 100%;
+    }
+
+    .callLogTable_row {
+        line-height: 10px;
+    }
+
+    .grey {
+        color: #808080;
+    }
+
+    .set_font {
+        font-family: Sans-Serif;
+        font-weight: normal;
+        
+    }
+
+    .left {
+        position: relative;
+        top: -3px;
+    }
+
+    .right {
+        position: relative;
+        bottom: -3px;
+    }
+
+    .font_thin {
+        font-weight: 300;
+    }
+
+    .font_size_small {
+        font-size: 13px;
+    }
+
+    .font_size_big {
+        font-size: 13px;
+    }
+    
+    .detail_icon {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media screen and (min-width: 341px) and (max-width: 767px) {   
     .container {
         position: relative;
         text-align: center;
@@ -71,7 +144,82 @@
     }
 }
 
-@media screen and (min-width: 1001px) {   
+
+
+@media screen and (max-width: 767px) {   
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .text_centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .profile_photo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .icon_block {
+        display: inline-block;
+    }
+
+    .time_block {
+        display: inline-block;
+    }
+
+    #callLogTable {
+        width: 70%;
+    }
+
+    .callLogTable_row {
+        line-height: 10px;
+    }
+
+    .grey {
+        color: #808080;
+    }
+
+    .set_font {
+        font-family: Sans-Serif;
+        font-weight: normal;
+        
+    }
+
+    .left {
+        position: relative;
+        top: -3px;
+    }
+
+    .right {
+        position: relative;
+        bottom: -3px;
+    }
+
+    .font_thin {
+        font-weight: 300;
+    }
+
+    .font_size_small {
+        font-size: 13px;
+    }
+
+    .font_size_big {
+        font-size: 13px;
+    }
+    
+    .detail_icon {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {   
     .container {
         position: relative;
         text-align: center;
@@ -145,6 +293,6 @@
     }
 
     #callLogTable {
-        width:  60%;
+        width:  80%;
     }
 }
